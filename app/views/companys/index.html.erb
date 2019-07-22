@@ -2,7 +2,13 @@
 <div class="banner-1" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://res.cloudinary.com/dw7ox75dg/image/upload/v1559064653/photo-1534972195531-d756b9bfa9f2.jpg);">
   <div class="container">
     <h1>Cumple el sueño de tu propia pagina web! </h1>
-    <p>Aca podes cumplir tu mejores diseños y las mejores mentes para ayudarte </p>
+    <div class="typed-container">
+      <h1>
+        <a href="" class="typewrite" data-period="2000" data-type='[ "Make your dream come true.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+          <span class="wrap"></span>
+        </a>
+      </h1>
+    </div>
     <a class="button-1" href="#">Contactanos</a>
   </div>
 </div>
@@ -135,29 +141,80 @@
   </div>
 </div>
 <section id="contacto">
-<div class="img-hover">
-  <div class="hovereffect">
-    <img class="img-responsive" src="https://images.unsplash.com/photo-1483389127117-b6a2102724ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80" alt="">
-    <div class="overlay">
-      <h2></h2>
-      <p class="set1">
-        <a href="https://www.instagram.com/" target="blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/" target="blank">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </p>
-      <hr>
-      <hr>
-      <p class="set2">
-        <a href="https://twitter.com" target="blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#">
-          <i class="fab fa-dribbble"></i>
-        </a>
-      </p>
+  <div class="img-hover">
+    <div class="hovereffect">
+      <img class="img-responsive" src="https://images.unsplash.com/photo-1483389127117-b6a2102724ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80" alt="">
+      <div class="overlay">
+        <h2></h2>
+        <p class="set1">
+          <a href="https://www.instagram.com/" target="blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </p>
+        <hr>
+        <hr>
+        <p class="set2">
+          <a href="https://twitter.com" target="blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-dribbble"></i>
+          </a>
+        </p>
+      </div>
     </div>
   </div>
-</div>
+  <script>
+
+    var TxtType = function(el, toRotate, period) {
+      this.toRotate = toRotate;
+      this.el = el;
+      this.loopNum = 0;
+      this.period = parseInt(period, 10) || 2000;
+      this.txt = '';
+      this.tick();
+      this.isDeleting = false;
+    };
+    TxtType.prototype.tick = function() {
+      var i = this.loopNum % this.toRotate.length;
+      var fullTxt = this.toRotate[i];
+      if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+      } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+      }
+      this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+      var that = this;
+      var delta = 200 - Math.random() * 100;
+      if (this.isDeleting) { delta /= 2; }
+      if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+      } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+      }
+      setTimeout(function() {
+        that.tick();
+      }, delta);
+    };
+    window.onload = function() {
+      var elements = document.getElementsByClassName('typewrite');
+      for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+      }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+      };
+    </script>
