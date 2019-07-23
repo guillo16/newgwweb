@@ -9,7 +9,7 @@
         </a>
       </h1>
     </div>
-    <a class="button-1" href="#">Contact us</a>
+    <%= link_to 'Contact us', new_contact_path, class: 'button-1' %>
   </div>
 </div>
 <div class="container">
@@ -168,7 +168,7 @@
     </div>
   </div>
 
-<script>
+  <script>
 
     var TxtType = function(el, toRotate, period) {
       this.toRotate = toRotate;

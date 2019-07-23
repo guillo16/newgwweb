@@ -1,4 +1,5 @@
-<div class="container">
+<%= render 'shared/navbar' %>
+<div class="form-container">
   <%= form_for @contact do |f| %>
   <% if flash[:error].present? %>
   <p> flash[:error]</p>
