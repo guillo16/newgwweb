@@ -1,0 +1,51 @@
+.greet-container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.flag-container-1 {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 300px;
+}
+
+
+
+
+.flag-3 {
+  margin-left: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+
+
+  img {
+    width: 200px;
+    height: 100px;
+  }
+  h1 {
+    text-align: center;
+    background-color: #F4F4F4;
+
+    font-size: 20px;
+  }
+
+  a {
+    text-align: center;
+    color: grey;
+    text-decoration: none;
+  }
+}
+
+
+@media(min-width: 100px)and(max-width: 600px) {
+  .flag-container-1 {
+    display: block;
+
+  }
+
+}
