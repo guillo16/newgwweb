@@ -1,4 +1,23 @@
 <%= render 'shared/navbar' %>
-<h1> hello</h1>
+<div class="greet-container">
+  <h2> Gracias por su mensaje </h2>
+  <p>Lo contactaremos pronto!</p>
+  <h2> Thanks for your message</h2>
+  <p>We will get back you soon</p>
+</div>
+<div class="flag-container-1">
+  <div class="flag-3">
+   <%= link_to companys_path do %>
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/1280px-Flag_of_Argentina.svg.png" alt="">
+   <h1> Version Español</h1>
+   <%end  %>
+ </div>
+ <div class="flag-3">
+   <%= link_to companys_path  do %>
+   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1024px-Flag_of_the_United_States.svg.png" alt="">
+   <h1> English Version</h1>
+   <%end  %>
+ </div>
+</div>
 
-<%= link_to 'volver', root_path %>
+
