@@ -17,7 +17,7 @@
 .image-about {
   padding: 10px;
   img {
-    width: 400px;
+    width: 350px;
     object-fit: cover;
     border-radius: 6px;
   }
@@ -27,7 +27,17 @@
   padding: 10px;
 }
 
-@media(max-width: 1000px) {
+.description-footer {
+  i {
+    font-size: 25px;
+  }
+}
+.btn-dark {
+  margin-left: 20px;
+  color: white
+}
+
+@media(max-width: 900px) {
   .about-container {
     display: block;
   }
@@ -40,5 +50,9 @@
     border-radius: 6px;
   }
 }
+}
+
+.skills-content {
+
 }
 
