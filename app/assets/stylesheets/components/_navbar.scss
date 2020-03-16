@@ -2,38 +2,36 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.9);
+  padding: 20px 10px;
+  background: rgba(0, 0, 0, 0.8);
   width: 100%;
 }
-
 .nabvar-content {
-
     a {
     margin-right: 10px;
     color: white;
     font-size: 14px;
     font-weight: bold;
-  }
-
-  img {
-    padding-bottom: 10px;
+    &:hover {
+      text-decoration: none;
+      color: lightgrey;
+    }
   }
 }
 .nabvar-logo {
-
-  h1 {
+  a {
     color: black;
     padding: 5px 15px;
     background-color: white;
     border-radius: 6px;
     font-size: 15px;
     font-weight: bold;
+    &:hover {
+      text-decoration: none;
+      background-color: lightgrey;
+    }
   }
 }
-
 .navbar-cart {
   font-size: 20px;
 }
-
-
