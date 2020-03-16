@@ -1,39 +1,104 @@
-// Specific CSS for your home-page
-.flag-container {
-  width: 80%;
-  margin: 0 auto;
-
-  display: flex;
-
-
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.flag {
-
-  img {
-    width: 300px;
-    height: 157px;
-  }
+.description {
+  margin-top: 70px;
+  text-align: center;
+  margin-bottom: 70px;
   h1 {
-    text-align: center;
-    background-color: black;
-    width: 300px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 18px;
   }
 }
 
-.flag-1 {
-  margin-top: 100px;
-  margin-bottom: 60px;
-  img {
-    width: 300px;
-    height: 157px;
+.typed-container {
+
+  text-align: left;
+  color:#fff;
+  padding-bottom: 40px;
+
+  a {
+    text-decoration: none;
+    color: lightgrey;
+    font-size: 25px;
+  }
+}
+
+// cards
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-bottom: 40px;
+}
+
+.category {
+  padding: 16px;
+  text-align: center;
+
+  i {
+    font-size: 50px;
   }
   h1 {
-    text-align: center;
-    background-color: black;
-    width: 300px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
   }
+}
+
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .typed-container {
+
+  text-align: center;
+  color:#fff;
+  padding-bottom: 40px;
+
+  a {
+    text-decoration: none;
+    color: lightgrey;
+    font-size: 25px;
+
+
+  }
+}
+}
+
+
+@media (max-width: 575px) {
+
+  .description {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    h3 {
+      font-size: 17px;
+    }
+  }
+
+  .category {
+    padding: 16px;
+    text-align: center;
+
+    i {
+      font-size: 44px;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 13px;
+    }
+  }
+
 }
