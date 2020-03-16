@@ -73,6 +73,22 @@
     font-size: 25px;
   }
 }
+@media(max-width: 575px) {
+  .about-wrapper {
+    margin-bottom: 40px;
+  h2 {
+   margin-bottom: 30px;
+  }
+}
+  .skills-wrapper {
+    display: block;
+    width: 100%;
+  }
+  .skills-container1 {
+  width: 90%;
+  padding: 0px;
+}
+}
 .skills-footer {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.7);
