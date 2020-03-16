@@ -1,0 +1,44 @@
+.about-wrapper {
+  width: 90%;
+  margin: 80px auto;
+  h2 {
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+.about-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-about {
+  padding: 10px;
+  img {
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+}
+
+.about-description {
+  padding: 10px;
+}
+
+@media(max-width: 1000px) {
+  .about-container {
+    display: block;
+  }
+
+  .image-about {
+  padding: 10px;
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+}
+}
+
