@@ -5,6 +5,8 @@
     padding-left: 10px;
     font-size: 20px;
     font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 2px solid lightgrey;
   }
 }
 .about-container {
@@ -58,10 +60,24 @@
 }
 
 .skills-container1 {
-  width: 100%;
+  width: 90%;
   padding: 30px;
-
 }
+
+.skills-content {
+  margin-bottom: 15px;
+  color: grey;
+  font-size: bold;
+  p {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  i {
+    color: black;
+    font-size: 25px;
+  }
+}
+
 
 
 
